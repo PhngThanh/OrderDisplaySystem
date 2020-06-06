@@ -79,6 +79,7 @@ namespace Admin_Page.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    Session["UserID"] = Guid.NewGuid();
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
