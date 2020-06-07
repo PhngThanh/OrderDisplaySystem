@@ -11,7 +11,6 @@ namespace Admin_Page.Controllers
     public class StoreController : Controller
     {
         // GET: Store
-        [ValidateAntiForgeryToken]
         public ActionResult Index()
         {
             return View();
